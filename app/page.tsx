@@ -1,65 +1,195 @@
+"use client";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-[#f5f5f5] font-sans m-5 px-0 py-0">
+      <div className="max-w-6xl mx-auto pt-12 pb-16 px-1 sm:px-4">
+        {/* Header Section */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h1 className="text-[48px] font-bold leading-12 tracking-tight text-[#333] mb-6 header-responsive wrap-break-word">
+              QOREM IPSUM DOLOR
+              <br />SIT AMET, CONSE
+            </h1>
+          </div>
+          <div className="flex flex-col items-start">
+            <p className="text-base text-[#333] mb-6 max-w-xs header-desc-responsive">
+              Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a,
+            </p>
+            <button className="bg-[#333] text-white rounded-full px-7 py-3 font-bold text-base shadow hover:bg-[#222] transition learn-more-btn-responsive">
+              LEARN MORE
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {/* Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Column */}
+          <div className="flex flex-col gap-8 md:gap-8 custom-gap-mobile">
+            {/* Card 1 */}
+            <div className="bg-[#d9d9d9] h-120 rounded-lg shadow flex items-end min-w-0">
+              <div className="bg-white rounded-lg shadow pl-2.5 pr-2.5 pb-2.5 pt-3 sm:pt-6 m-2.5 w-full h-45 flex flex-col min-w-0">
+                <h2 className="text-base font-bold mb-2 text-[#333] wrap-break-word">LOREM IPSUM</h2>
+                <p className="text-sm text-[#333] leading-relaxed custom-ellipsis">
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim, &nbsp;
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                </p>
+              </div>
+            </div>
+            {/* Card 3 */}
+            <div className="bg-[#d9d9d9] h-120 rounded-lg shadow flex items-end min-w-0">
+              <div className="bg-white rounded-lg shadow pl-2.5 pr-2.5 pb-2.5 pt-3 sm:pt-6 m-2.5 w-full h-45 flex flex-col min-w-0">
+                <h2 className="text-base font-bold mb-2 text-[#333] wrap-break-word">LOREM IPSUM</h2>
+                <p className="text-sm text-[#333] leading-relaxed custom-ellipsis">
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim, &nbsp;
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Right Column (shifted down) */}
+          <div className="flex flex-col gap-8 md:gap-8 mt-20 md:mt-20 custom-gap-mobile custom-gap-mobile-right">
+            {/* Card 2 */}
+            <div className="bg-[#d9d9d9] h-120 rounded-lg shadow flex items-end min-w-0">
+              <div className="bg-white rounded-lg shadow pl-2.5 pr-2.5 pb-2.5 pt-3 sm:pt-6 m-2.5 w-full h-45 flex flex-col min-w-0">
+                <h2 className="text-base font-bold mb-2 text-[#333] wrap-break-word">LOREM IPSUM</h2>
+                <p className="text-sm text-[#333] leading-relaxed custom-ellipsis">
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim, &nbsp;
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                </p>
+              </div>
+            </div>
+            {/* Card 4 */}
+            <div className="bg-[#d9d9d9] h-120 rounded-lg shadow flex items-end min-w-0">
+              <div className="bg-white rounded-lg shadow pl-2.5 pr-2.5 pb-2.5 pt-3 sm:pt-6 m-2.5 w-full h-45 flex flex-col min-w-0">
+                <h2 className="text-base font-bold mb-2 text-[#333] wrap-break-word">LOREM IPSUM</h2>
+                <p className="text-sm text-[#333] leading-relaxed custom-ellipsis">
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim, &nbsp;
+                  Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                  turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
+      <style jsx global>{`
+        .custom-ellipsis {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
+        .custom-ellipsis {
+          -webkit-line-clamp: 4;
+        }
+        @media (max-width: 350px) {
+          .custom-ellipsis {
+            -webkit-line-clamp: 3;
+          }
+        }
+        @media (max-width: 250px) {
+          .custom-ellipsis {
+            -webkit-line-clamp: 2;
+          }
+        }
+        @media (max-width: 180px) {
+          .custom-ellipsis {
+            -webkit-line-clamp: 1;
+          }
+        }
+        .bg-white, .bg-[#d9d9d9] {
+          min-width: 0 !important;
+          box-sizing: border-box;
+        }
+        /* Responsive header for very small screens */
+        @media (max-width: 239px) {
+          .header-responsive {
+            font-size: 18px !important;
+            line-height: 20px !important;
+            word-break: break-word !important;
+            padding: 0 !important;
+            margin: 0 0 6px 0 !important;
+          }
+          .header-desc-responsive {
+            font-size: 10px !important;
+            line-height: 12px !important;
+            word-break: break-word !important;
+            max-width: 100% !important;
+          }
+        }
+        @media (max-width: 223px) {
+          .learn-more-btn-responsive {
+            font-size: 7px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-top: 6px !important;
+            padding-bottom: 6px !important;
+            min-width: 0 !important;
+            width: 70px !important;
+            height: 28px !important;
+            border-radius: 9999px !important;
+            margin-top: 4px !important;
+            white-space: normal !important;
+            text-align: center !important;
+          }
+        }
+        @media (max-width: 170px) {
+          .header-responsive {
+            font-size: 8px !important;
+            line-height: 10px !important;
+            margin: 0 0 2px 0 !important;
+          }
+          .header-desc-responsive {
+            font-size: 5px !important;
+            line-height: 7px !important;
+            max-width: 100% !important;
+          }
+        }
+        @media (max-width: 150px) {
+          .header-responsive {
+            font-size: 6px !important;
+            line-height: 7px !important;
+          }
+          .header-desc-responsive {
+            font-size: 4px !important;
+            line-height: 5px !important;
+          }
+          .learn-more-btn-responsive {
+            font-size: 5px !important;
+            width: 50px !important;
+            height: 18px !important;
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+            padding-top: 3px !important;
+            padding-bottom: 3px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          /* Set same vertical gap for all stacked cards */
+          .custom-gap-mobile {
+            gap: 24px !important;
+          }
+          /* Remove extra margin-top from right column when stacked */
+          .custom-gap-mobile-right {
+            margin-top: 0 !important;
+          }
+          /* Remove margin between 2nd and 3rd box (ensure both top and bottom are 0) */
+          .custom-gap-mobile > :nth-child(2) {
+            margin-bottom: -5px !important;
+            margin-top: 0 !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
